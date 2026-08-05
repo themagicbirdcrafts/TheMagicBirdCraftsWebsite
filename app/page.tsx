@@ -37,26 +37,26 @@ const categories = [
 
 const workshops = [
   {
-    title: "Learn to Knit",
-    level: "BEGINNER",
+    title: "Crochet for absolute beginners",
+    level: "BEGINNER and REFRESHER",
     duration: "2.5 hours",
-    price: "£35",
+    price: "£45",
     image:
       "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=85",
   },
   {
-    title: "Learn to Crochet",
-    level: "BEGINNER",
-    duration: "2.5 hours",
+    title: "Make a Dreamcatcher",
+    level: "BEGINNER and Children",
+    duration: "2 hours",
     price: "£35",
     image:
       "https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=800&q=85",
   },
   {
-    title: "Cable Knitting",
+    title: "Short Row Crochet",
     level: "INTERMEDIATE",
-    duration: "3 hours",
-    price: "£45",
+    duration: "2 hours",
+    price: "£35",
     image:
       "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=85",
   },
@@ -98,7 +98,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#faf9f7] text-[#24252b]">
       {/* Announcement */}
       <div className="bg-[#b9d2b1] px-4 py-2 text-center text-sm font-medium text-[#30352f]">
-        Free shipping on orders over £60 ✦
+        Free shipping on orders over £50 ✦
       </div>
 
       {/* Navigation */}
@@ -106,10 +106,10 @@ export default function Home() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <div className="relative h-11 w-11">
+            <div className="relative h-13 w-13">
               <Image
                 src="/logo.png"
-                alt="Stitch & Loop logo"
+                alt="Magic Bird Crafts logo"
                 fill
                 className="object-contain"
                 priority
@@ -122,7 +122,7 @@ export default function Home() {
               </div>
 
               <div className="hidden text-[9px] font-semibold uppercase tracking-[0.25em] text-black/45 sm:block">
-                Knit · Crochet · Create
+                Crochet · Create · Learn
               </div>
             </div>
           </a>
@@ -141,8 +141,8 @@ export default function Home() {
             <a href="#about" className="hover:text-[#585bb0]">
               About
             </a>
-            <a href="#journal" className="hover:text-[#585bb0]">
-              Journal
+            <a href="#blog" className="hover:text-[#585bb0]">
+              Blog
             </a>
           </nav>
 
@@ -188,7 +188,7 @@ export default function Home() {
 
               <p className="mt-7 max-w-md text-base leading-7 text-black/60">
                 Beautiful yarns, thoughtful tools and inspiring workshops to
-                help you knit, crochet and unwind.
+                help you knit create, as much as possible bought and created on the British Isles.
               </p>
 
               <div className="mt-9 flex flex-wrap gap-3">
@@ -255,7 +255,7 @@ export default function Home() {
             {
               icon: "♡",
               title: "Quality materials",
-              text: "Carefully sourced yarns and tools you'll love.",
+              text: "Carefully sourced yarns and tools you'll love locally.",
             },
             {
               icon: "♢",
@@ -360,7 +360,7 @@ export default function Home() {
             <p className="mt-6 max-w-md leading-7 text-white/70">
               From complete beginner sessions to advanced techniques, our
               workshops are relaxed, welcoming and designed to help you grow
-              your skills.
+              your skills, have fun and meet like minded crafters.
             </p>
 
             <a
