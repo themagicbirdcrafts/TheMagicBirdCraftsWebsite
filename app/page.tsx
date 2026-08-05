@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import Image from "next/image";
+import Link from 'next/link';
 
 const categories = [
   {
@@ -105,7 +106,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-black/5 bg-[#faf9f7]/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="relative h-13 w-13">
               <Image
                 src="/logo.png"
@@ -125,25 +126,25 @@ export default function Home() {
                 Crochet · Create · Learn
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-9 text-sm font-medium md:flex">
-            <a href="#shop" className="flex items-center gap-1 hover:text-[#585bb0]">
+            <Link href="/shop" className="flex items-center gap-1 hover:text-[#585bb0]">
               Shop <ChevronDown size={14} />
-            </a>
-            <a href="#workshops" className="hover:text-[#585bb0]">
+            </Link>
+            <Link href="/workshops" className="hover:text-[#585bb0]">
               Workshops
-            </a>
-            <a href="#learn" className="flex items-center gap-1 hover:text-[#585bb0]">
+            </Link>
+            <Link href="/learn" className="flex items-center gap-1 hover:text-[#585bb0]">
               Learn <ChevronDown size={14} />
-            </a>
-            <a href="#about" className="hover:text-[#585bb0]">
+            </Link>
+            <Link href="/about" className="hover:text-[#585bb0]">
               About
-            </a>
-            <a href="#blog" className="hover:text-[#585bb0]">
+            </Link>
+            <Link href="/blog" className="hover:text-[#585bb0]">
               Blog
-            </a>
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -163,9 +164,31 @@ export default function Home() {
               </span>
             </button>
 
-            <button className="ml-1 rounded-full p-2 md:hidden">
-              <Menu size={23} />
-            </button>
+            <details className="relative md:hidden">
+              <summary className="ml-1 rounded-full p-2 list-none transition hover:bg-[#b9d2b1]/40" aria-label="Open navigation menu">
+                <Menu size={23} />
+              </summary>
+
+              <div className="absolute right-0 z-50 mt-2 min-w-[180px] overflow-hidden rounded-3xl border border-black/10 bg-white text-[#24252b] shadow-2xl">
+                <div className="flex flex-col gap-1 p-3">
+                  <Link href="/shop" className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-[#f5f5f5]">
+                    Shop
+                  </Link>
+                  <Link href="/workshops" className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-[#f5f5f5]">
+                    Workshops
+                  </Link>
+                  <Link href="/learn" className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-[#f5f5f5]">
+                    Learn
+                  </Link>
+                  <Link href="/about" className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-[#f5f5f5]">
+                    About
+                  </Link>
+                  <Link href="/blog" className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-[#f5f5f5]">
+                    Blog
+                  </Link>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
       </header>
@@ -192,19 +215,19 @@ export default function Home() {
               </p>
 
               <div className="mt-9 flex flex-wrap gap-3">
-                <a
-                  href="#shop"
+                <Link
+                  href="/shop"
                   className="rounded-lg bg-[#585bb0] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   Shop everything
-                </a>
+                </Link>
 
-                <a
-                  href="#workshops"
+                <Link
+                  href="/workshops"
                   className="rounded-lg border border-[#585bb0] px-7 py-3.5 text-sm font-semibold text-[#585bb0] transition hover:bg-[#585bb0] hover:text-white"
                 >
                   Book a workshop
-                </a>
+                </Link>
               </div>
 
               <div className="mt-12 flex items-center gap-8 border-t border-black/10 pt-7">
@@ -304,18 +327,18 @@ export default function Home() {
               </h2>
             </div>
 
-            <a
-              href="#"
+            <Link
+              href="/shop"
               className="hidden items-center gap-2 text-sm font-semibold text-[#585bb0] sm:flex"
             >
               Shop all <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
             {categories.map((category) => (
-              <a
-                href="#"
+              <Link
+                href="/shop"
                 key={category.name}
                 className="group relative aspect-[0.82] overflow-hidden rounded-2xl"
               >
@@ -334,7 +357,7 @@ export default function Home() {
                     className="text-[#585bb0] transition group-hover:translate-x-1"
                   />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -363,13 +386,13 @@ export default function Home() {
               your skills, have fun and meet like minded crafters.
             </p>
 
-            <a
-              href="#"
+            <Link
+              href="/workshops"
               className="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-[#585bb0] transition hover:-translate-y-0.5"
             >
               See all workshops
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
@@ -425,12 +448,12 @@ export default function Home() {
               </h2>
             </div>
 
-            <a
-              href="#"
+            <Link
+              href="/shop"
               className="hidden items-center gap-2 text-sm font-semibold text-[#585bb0] sm:flex"
             >
               Shop all <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-4 md:gap-6">
@@ -486,13 +509,13 @@ export default function Home() {
                 tips, discover new patterns and share what you're making.
               </p>
 
-              <a
-                href="#"
+              <Link
+                href="/learn"
                 className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#585bb0] px-6 py-3.5 text-sm font-semibold text-white"
               >
                 Join the community
                 <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
 
             <div className="relative h-[360px] lg:h-full lg:min-h-[430px]">
@@ -573,10 +596,10 @@ export default function Home() {
                 Shop
               </h3>
               <ul className="mt-5 space-y-3 text-sm text-white/55">
-                <li><a href="#" className="hover:text-white">Yarn</a></li>
-                <li><a href="#" className="hover:text-white">Tools & Notions</a></li>
-                <li><a href="#" className="hover:text-white">Kits</a></li>
-                <li><a href="#" className="hover:text-white">Gifts</a></li>
+                <li><Link href="/shop" className="hover:text-white">Yarn</Link></li>
+                <li><Link href="/shop" className="hover:text-white">Tools & Notions</Link></li>
+                <li><Link href="/shop" className="hover:text-white">Kits</Link></li>
+                <li><Link href="/shop" className="hover:text-white">Gifts</Link></li>
               </ul>
             </div>
 
@@ -585,7 +608,7 @@ export default function Home() {
                 Help
               </h3>
               <ul className="mt-5 space-y-3 text-sm text-white/55">
-                <li><a href="#" className="hover:text-white">Workshops</a></li>
+                <li><Link href="/workshops" className="hover:text-white">Workshops</Link></li>
                 <li><a href="#" className="hover:text-white">Shipping</a></li>
                 <li><a href="#" className="hover:text-white">Contact</a></li>
                 <li><a href="#" className="hover:text-white">FAQs</a></li>
@@ -594,7 +617,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 border-t border-white/10 pt-6 text-xs text-white/35">
-            © 2026 Stitch & Loop. Made with creativity.
+            © 2026 The Magic Bird Crafts. All rights reserved.
           </div>
         </div>
       </footer>

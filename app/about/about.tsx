@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = [
   {
@@ -105,7 +106,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-black/5 bg-[#faf9f7]/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="relative h-13 w-13">
               <Image
                 src="/logo.png"
@@ -125,25 +126,25 @@ export default function Home() {
                 Crochet · Create · Learn
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-9 text-sm font-medium md:flex">
-            <a href="#shop" className="flex items-center gap-1 hover:text-[#585bb0]">
+            <Link href="/shop" className="flex items-center gap-1 hover:text-[#585bb0]">
               Shop <ChevronDown size={14} />
-            </a>
-            <a href="#workshops" className="hover:text-[#585bb0]">
+            </Link>
+            <Link href="/workshops" className="hover:text-[#585bb0]">
               Workshops
-            </a>
-            <a href="#learn" className="flex items-center gap-1 hover:text-[#585bb0]">
+            </Link>
+            <Link href="/learn" className="flex items-center gap-1 hover:text-[#585bb0]">
               Learn <ChevronDown size={14} />
-            </a>
-            <a href="#about" className="hover:text-[#585bb0]">
+            </Link>
+            <Link href="/about" className="hover:text-[#585bb0]">
               About
-            </a>
-            <a href="#blog" className="hover:text-[#585bb0]">
+            </Link>
+            <Link href="/blog" className="hover:text-[#585bb0]">
               Blog
-            </a>
+            </Link>
           </nav>
 
           {/* Actions */}
