@@ -109,7 +109,7 @@ export default function Home() {
           <Link href="/" className="flex items-center gap-3">
             <div className="relative h-13 w-13">
               <Image
-                src="/logo.png"
+                src="/SmLogo.png"
                 alt="Magic Bird Crafts logo"
                 fill
                 className="object-contain"
